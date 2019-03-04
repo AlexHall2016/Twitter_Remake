@@ -30,6 +30,12 @@ class HomeTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+        self.loadTweets()
+        
+    }
+    
     @objc func loadTweets(){
         numberOfTweets=20
         let myURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
@@ -90,6 +96,9 @@ class HomeTableViewController: UITableViewController {
         if let imageData = data{
             cell.ProfileImageView.image = UIImage(data: imageData)
         }
+        
+        cell.setFavorited(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetID = tweetArray[indexPath.row]["id"] as! Int
         return cell
     }
     
