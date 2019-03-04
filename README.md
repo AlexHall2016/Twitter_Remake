@@ -24,6 +24,9 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/IaGfpRA9Rg.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /># Project 3 - *Twitter Remake*
 
+
+
+
 **Twitter Remake** is a basic twitter app to read your tweets.
 
 Time spent: *3.5** hours spent in total
